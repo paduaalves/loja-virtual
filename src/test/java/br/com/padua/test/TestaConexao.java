@@ -1,14 +1,17 @@
-package br.com.padua.conexao;
+package br.com.padua.test;
 
+import java.io.FileNotFoundException;
+import java.io.IOException;
 import java.sql.Connection;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.sql.Statement;
 
+import br.com.padua.conexao.ConnectionFactory;
 import br.com.padua.modelo.Produto;
 
 public class TestaConexao {
-    public static void main(String[] args) throws SQLException {
+    public static void main(String[] args) throws SQLException, FileNotFoundException, IOException {
         ConnectionFactory connectionFactory = new ConnectionFactory();
         Connection con = connectionFactory.recuperarConexao();
 
